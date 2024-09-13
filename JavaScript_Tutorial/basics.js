@@ -47,7 +47,7 @@ var e = 2; // no error
 console.log("Value of the e is : " + e);
 
 function lethoistingExample(){
-    console.log(y); // output: Reference error: Cannot access 'y' before initialization
+    //console.log(y); // output: Reference error: Cannot access 'y' before initialization
     let y=30; // declaraion and initialization of 'y'
     console.log(y); // output: 30
 }
@@ -58,7 +58,7 @@ if (true) {
     let f=100;
 } 
 
-console.log("let variable 'f' value is : " +f); // ReferenceError: f is not defined
+//console.log("let variable 'f' value is : " +f); // ReferenceError: f is not defined
 
 a=10;
 str="John"
@@ -107,6 +107,7 @@ console.log(s.toUpperCase())
 let aText = "                Pavan Kalyan    "
 console.log(aText)
 console.log(aText.trim())
+console.log("JavaScript basics..!")
 
 
 
