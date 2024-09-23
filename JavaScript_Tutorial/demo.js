@@ -51,6 +51,41 @@ for (let i = 1; i<=n; i++) {
 }
 console.log("Factorial result is : " + fact);
 
+let scores = Array(15,92,65,20,35,50,80);
+var sum=0;
 
-//reduce filter map
-console.log(arr.reduce((sum,totalScore)=>sum+totalScore,0));
+// user defined function
+function sumArray(){
+   for (let i = 0; i < scores.length; i++) {
+      sum=sum+scores[i];
+   }
+   console.log("Sum of array elements is : " + sum);
+}
+
+sumArray(); // function call
+
+//reduce, filter, map --> these are the powerful functions which are part of array
+// reduce method will perform the operation on all the elements of an array
+let totalscore = scores.reduce((sum, score)=>sum+score,0);
+console.log("Sum of array elements is : " + totalscore);
+
+let values = Array(1,2,3,4);
+let product=1
+let totalProduct = values.reduce((product, score)=>product*score,1);
+console.log("Product of array elements is : " + totalProduct);
+
+
+var numbers = [2,4,5,9,10,7];
+var evenNumbers=[];
+// Task --> Create a new array from the above array of even numbers
+for (let i=0;i<numbers.length;i++) {
+   if (numbers[i]%2==0) {
+      evenNumbers.push(numbers[i]);
+   } 
+}
+console.log("Even numbers are : " + evenNumbers);
+
+// filter - it filters based on the filter condition and pushes the values
+let evenNum = numbers.filter(num=>num%2==0);
+console.log("Even numbers extracte from filter method are : " + evenNum);
+
