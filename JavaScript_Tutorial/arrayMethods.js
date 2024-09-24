@@ -89,3 +89,22 @@ console.log("Even numbers are : " + evenNumbers);
 let evenNum = numbers.filter(num=>num%2==0);
 console.log("Even numbers extracte from filter method are : " + evenNum);
 
+//map
+let prices = Array(1,2,3,4);
+let mappedArray = prices.map(price=>price*2);
+console.log(mappedArray);
+
+// Assignment: Take an array and ontop of the array apply reduce, filter and map functions and display the final results
+let array = [1,2,3,4,5]
+let factorial = array.reduce((accumalator, currentValue)=>accumalator*currentValue);
+console.log(factorial);
+
+let evenNo = array.filter(num=>num%2==0);
+console.log(evenNo);
+
+let productArray = array.map(num=>num*2);
+console.log(productArray);
+
+
+
+
