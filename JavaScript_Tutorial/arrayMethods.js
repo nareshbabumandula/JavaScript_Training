@@ -105,6 +105,13 @@ console.log(evenNo);
 let productArray = array.map(num=>num*2);
 console.log(productArray);
 
+let arrValues = [1,2,3,4,5,6,7,8,9,10];
+let output  = arrValues.filter(num=>num%2==0).map(num=>num*2).reduce((accumalator, currentValue)=>accumalator*currentValue);
+console.log(output);
 
-
-
+let fruits = ["apple", "banana", "kiwi", "dragon fruit", "blue berry"]
+console.log(fruits);
+fruits.sort(); // Sorting in ascending order
+console.log(fruits);
+fruits.sort((a,b)=>b.localeCompare(a)); // Sorting in descending order
+console.log(fruits);

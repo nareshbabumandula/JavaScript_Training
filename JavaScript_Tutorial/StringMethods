@@ -1,0 +1,37 @@
+// 1. Length of the string
+let str = "Hello World";
+console.log("Length of the string is : " + str.length);
+
+// 2. Convert string to uppercase
+let strName = "hello";
+console.log(strName.toUpperCase());
+
+// 3. Convert string to lowercase
+let s="WORLD";
+console.log(s.toLowerCase());
+
+// 4. Find character at the specified index
+console.log(str.charAt(0));
+
+// 5. Find index of the specified character
+console.log(str.indexOf('H'));
+
+// 6. Check if the substring is available in the main string
+let sText = "hello world welcome to javascript training..!"
+console.log(sText.includes("javascript"));
+
+// 7. Extract section of a string
+console.log(sText.slice(0,5));
+console.log(sText.slice(-11));
+
+// 8. Extract section of a string but it does not accept negative indices
+console.log(sText.substring(0,5));
+
+// 9. Split a string into an array of substrings
+let arrWords = sText.split(" ");
+console.log(arrWords[0]);
+console.log(arrWords[1]);
+console.log(arrWords[2]);
+
+// 10. Replace the first occurance of a subtring with a new value
+console.log(sText.replace("to", "to the"));
