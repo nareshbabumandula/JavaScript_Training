@@ -29,3 +29,13 @@ function divsion(a,b){
 }
 let result = divsion(10,2);
 console.log("Divsion of a and b is : " +result);
+
+// If a function do not have name => Anyonymus function -- function expressions
+let sum = function (a,b) {
+    return a+b;
+}
+console.log("Sum is : " + sum(20,40));
+
+// If a function do not have name => Anyonymus function -- function expressions
+let sumofnumbers =(a,b)=>a+b;
+console.log("Sum is numbers is : " + sumofnumbers(10,60));
