@@ -93,3 +93,8 @@ var x=null;
 var y; // undefined
 console.log(x===null);
 console.log(y===undefined);
+
+import Person from './Classes';
+
+new Person("Sjoerd", "Jager");
+person.fullName();
