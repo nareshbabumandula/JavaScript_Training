@@ -25,5 +25,4 @@ person.fullName();
 let person1 = new Person("Naresh", "Mandula");
 person1.fullName();
 
-
 module.exports=Person;
