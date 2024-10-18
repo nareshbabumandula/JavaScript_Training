@@ -9,7 +9,7 @@ const {chromium, firefox, webkit} = require('playwright');
     // Navigate to a URL
     await page.goto("https://www.mycontactform.com");
     await page.waitForTimeout(5000);
-
+  
     // Get a current URL
     const currentURL = page.url();
     console.log('Current URL is : ', currentURL);
@@ -30,6 +30,14 @@ const {chromium, firefox, webkit} = require('playwright');
     // Refresh the page
     await page.reload();
 
+    // Go back to homepage
+    await page.goto("https://www.mycontactform.com");
+
+    await page.locator('#user').fill('testuser');
+    await page.locator('#pass').fill('Secure*1234');
+      
+
     await browser.close();
 })();
+
 
