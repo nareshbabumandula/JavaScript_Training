@@ -36,7 +36,7 @@ const {chromium, firefox, webkit} = require('playwright');
     await page.locator('#user').fill('testuser');
     await page.locator('#pass').fill('Secure*1234');
       
-
+    await context.close();
     await browser.close();
 })();
 

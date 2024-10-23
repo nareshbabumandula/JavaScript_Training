@@ -8,9 +8,9 @@ const {chromium, firefox, webkit} = require('playwright');
     // Navigate to a URL
     await page.goto("https://www.mycontactform.com");
     
-    // Working with text box
-    await page.locator('id=user').fill('Bhavani');
-    await page.locator('id=pass').fill('Secure*1234');
+    // Working with button
+    await page.locator('input[name="btnSubmit"]').click();
+   
     await page.waitForTimeout(2000);
     await context.close();
     await browser.close();
