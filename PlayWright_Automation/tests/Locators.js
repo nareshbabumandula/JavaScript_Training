@@ -20,10 +20,23 @@ const {chromium, firefox, webkit} = require('playwright');
 
     // relative xpath from the node of our choice
     await page.fill('xpath=//table/tbody/tr[2]/td/input', 'Test Subject..!');
+    
+    // relative xpath with attributes
+    await page.fill('//input[@id="user"]', 'srikanth');
+    await page.fill('//input[@id="pass"]', 'Secure*1234');
+    await page.fill('//input[@id="pass"]', '');
 
+    // relative xpath with and keyword
+    await page.fill('//input[@id="user" and @name="user"]', 'Ramu');
+    await page.waitForTimeout(2000);
+    await page.fill('//input[@id="user" and @name="user"]', '');
+
+    // relative xpath with or keyword
+    await page.fill('//input[@id="user" or @name="user123"]', 'Sravya');
+    
     await page.waitForTimeout(4000);
     await context.close();
     await browser.close();
 
-
 })();
+
