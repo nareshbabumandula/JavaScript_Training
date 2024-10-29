@@ -33,6 +33,22 @@ const {chromium, firefox, webkit} = require('playwright');
 
     // relative xpath with or keyword
     await page.fill('//input[@id="user" or @name="user123"]', 'Sravya');
+    await page.fill('//input[@id="user" or @name="user123"]', '');
+
+    // xpath with starts-with 
+    //const element = await page.locator('xpath=//input[starts-with(@id,"use") and not(@type="hidden")]');
+    const element = await page.locator('xpath=//input[starts-with(@id,"use")]').nth(0); // first element as per index 0
+    await element.fill("Kavya");
+    await page.waitForTimeout(2000);
+
+    // xpath with contains 
+    //await page.locator('xpath=//input[contains(@id,"se") and not(@type="hidden")]').fill("Bhavani");
+    await page.locator('xpath=//input[contains(@id,"se")]').nth(0).fill("Bhavani");
+
+    // check the visibility of the object
+    const visible = await page.locator('xpath=//input[contains(@id,"se")]').nth(0).isVisible();
+    console.log(`Element visibility status is :  ${visible}`);
+    
     
     await page.waitForTimeout(4000);
     await context.close();
