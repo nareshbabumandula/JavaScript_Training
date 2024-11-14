@@ -15,5 +15,4 @@ const {chromium, firefox, webkit} = require('playwright');
     await context.close();
     await browser.close();
 
-
 })();

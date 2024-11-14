@@ -17,4 +17,3 @@ const {chromium, firefox, webkit} = require('playwright');
     await browser.close();
 
 })();
-

@@ -24,6 +24,8 @@ module.exports = defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
+    headless:false,
+    
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
@@ -76,4 +78,16 @@ module.exports = defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
+
+// playwright.config.js
+const config = {
+  use: {
+    "headless": true,
+  },
+  reporter: [
+    ['html', { outputFolder: './results/playwright-report.html', open: 'never' }],
+  ]
+};
+
+module.exports = config;
 
