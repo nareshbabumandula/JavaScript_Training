@@ -31,9 +31,14 @@ test.describe('Swag Labs Tests', ()=>{
         await page.waitForTimeout(2000);
 
         // Locating an object by CSS Selectors using multiple attributes with AND and OR conditions combination
-        await page.locator('[name="user"][id="user"],[class="txt_log"]').fill("Teja")
+        await page.locator('[name="user"][id="user"],[class="txt_log123"]').fill("Teja")
         await page.waitForTimeout(2000);
-       
+
+        // Locating an object by CSS Selector using 
+        await page.locator('div>input#user').fill("Ramesh")
+        await page.waitForTimeout(2000);
+    
+
     });
 });
 
