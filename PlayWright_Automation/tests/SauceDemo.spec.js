@@ -9,21 +9,20 @@ test.describe('Swag Labs Tests', ()=>{
         await page.goto("https://www.saucedemo.com/");
     })
 
-
-test('Access Site', async ({page}) => {
-    // Assertion
-     await expect(page).toHaveURL("https://www.saucedemo.com/");
-     // Assertion
-     await expect(page.locator('#login-button')).toBeVisible();
- });
- 
- test('Login into Swag Labs', async ({page}) => {
-     await page.locator('#user-name').fill("standard_user");
-     await page.waitForTimeout(2000);
-     await page.locator('#password').fill("secret_sauce");
-     await page.waitForTimeout(2000);
-     await page.locator('#login-button').click();
-     await page.waitForTimeout(2000);
- });
-
+    test('Access Site', async ({page}) => {
+        // Assertion
+        await expect(page).toHaveURL("https://www.saucedemo.com/");
+        // Assertion
+        await expect(page.locator('#login-button')).toBeVisible();
+    });
+    
+    test('Login into Swag Labs', async ({page}) => {
+        await page.locator('#user-name').fill("standard_user");
+        await page.waitForTimeout(2000);
+        await page.locator('#password').fill("secret_sauce");
+        await page.waitForTimeout(2000);
+        await page.locator('#login-button').click();
+        await page.waitForTimeout(2000);
+    });
 });
+

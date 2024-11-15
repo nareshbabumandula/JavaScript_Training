@@ -48,8 +48,7 @@ const {chromium, firefox, webkit} = require('playwright');
     // check the visibility of the object
     const visible = await page.locator('xpath=//input[contains(@id,"se")]').nth(0).isVisible();
     console.log(`Element visibility status is :  ${visible}`);
-    
-    
+        
     await page.waitForTimeout(4000);
     await context.close();
     await browser.close();
