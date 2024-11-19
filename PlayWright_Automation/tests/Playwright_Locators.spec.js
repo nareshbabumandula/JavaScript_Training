@@ -37,8 +37,25 @@ test.describe('Swag Labs Tests', ()=>{
         // Locating an object by CSS Selector using 
         await page.locator('div>input#user').fill("Ramesh")
         await page.waitForTimeout(2000);
-    
 
+        // Locating an object with text
+        await page.locator('text="Sample Forms"').click();
+        await page.waitForTimeout(2000);
+
+        // Locating an object based on its partial text
+        await page.goBack(); // Navigate backward
+        await page.locator('text=Sample').click();
+        await page.waitForTimeout(2000);
+
+        // Locating an object based on its partial text using regular expressions
+        await page.goBack(); // Navigate backward
+        await page.locator(/Sample.*/).click();
+        await page.waitForTimeout(2000);
+
+        // Locating by Role like button, link, image etc
+        await page.goBack(); // Navigate backward
+        await page.getByRole('link', {name:'Sample Forms'}).click();
+        await page.waitForTimeout(2000);
     });
 });
 
