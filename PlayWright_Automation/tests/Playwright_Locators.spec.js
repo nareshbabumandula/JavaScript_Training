@@ -56,6 +56,32 @@ test.describe('Swag Labs Tests', ()=>{
         await page.goBack(); // Navigate backward
         await page.getByRole('link', {name:'Sample Forms'}).click();
         await page.waitForTimeout(2000);
+
+        // Locator by XPath
+        await page.locator('xpath=/html/body/div[3]/div[3]/form/table/tbody/tr[2]/td/input').fill("Test Subject");
+        await page.waitForTimeout(2000);
+
+        // Locator by Relative XPath from the node of our choice
+        await page.locator('xpath=//table/tbody/tr[2]/td/input').fill("Test Demo Subject");
+        await page.waitForTimeout(2000);
+
+         // XPath with attributes
+        await page.locator('//input[@id="subject"]').fill("Test Subject..!")
+        await page.waitForTimeout(2000);
+
+        // Locator by Placeholer Text
+        await page.locator('[placeholder="First Name"]').fill("Alex");
+        await page.waitForTimeout(2000);
+
+        // Locator by Label
+        await page.locator('label:has-text("E-mail Address:")').fill('testuser@gmail.com');
+        await page.waitForTimeout(2000);
+
+        // Locator by Data Attributes
+        await page.goto("https://www.saucedemo.com/");
+        await page.locator('[data-test="username"]').fill("standard_user");
+        await page.waitForTimeout(2000);
+
     });
 });
 
