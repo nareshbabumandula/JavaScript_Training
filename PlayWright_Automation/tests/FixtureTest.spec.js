@@ -1,6 +1,6 @@
 import { test, expect} from '@playwright/test';
 
-// Define a fixture
+// Define a fixture (reusable component that can be used across multiple test cases)
 test.beforeEach(async ({page}) => {
     await page.goto('https://www.mycontactform.com'); // common setp which needs to be executed before each test case
 });

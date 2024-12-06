@@ -18,9 +18,11 @@ test('Locate and interact with links', async ({page}) => {
     
     // Checkpoint or Assertion
     await expect(page).toHaveTitle("Webmaster Resources - myContactForm.com");
-    console.log("Paged heading display status is : " + await page.locator('text="Webmaster Resources"').isVisible());
+    console.log("Page heading display status is : " + await page.locator('text="Webmaster Resources"').isVisible());
 
     // Locate a link by role
+    await page.goBack();
+    await page.waitForTimeout(2000);
     await page.locator('role=link[name="Resources"]').click();
     await page.waitForTimeout(2000);
     
@@ -29,7 +31,7 @@ test('Locate and interact with links', async ({page}) => {
     console.log(await heading.isVisible());
     console.log(await heading.isEnabled());
     console.log(await heading.isHidden());
-    console.log("Paged heading display status is : " + await page.locator('text="Webmaster Resources"').isVisible());
+    console.log("Page heading display status is : " + await page.locator('text="Webmaster Resources"').isVisible());
 
     // Locate a link based on exact text match
     await page.locator('//a[contains(text(),"Sample Forms")]').click();
